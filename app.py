@@ -27,8 +27,18 @@ def predict(testing_image):
         return "Patient is COVID Positive."
 
 def main():
-    st.title('Covid-Pneumonia Detection')
+    st.title('Covid/Pneumonia Detection')
     st.subheader('This project will predict whether a person is suffering from Covid or Viral Pneumonia using Radiograph images.')
+    page_bg_img = '''
+    <style>
+    body {
+    background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+    background-size: cover;
+    }
+    </style>
+    '''
+
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
     image = st.file_uploader('Upload Image', type=['jpg', 'jpeg', 'png'])
 
